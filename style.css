@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vw;
+  border-radius: 50px;
+  color: #f3fdfb;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.6s;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+.made-with {
+  background-color: #78716c;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4000px;
+  border-color: #78716c;
+  border-width: 1px;
+  border-style: solid;
+  position: absolute;
+  bottom: 0;
+  right: 85px;
+}
+
+.made-with:hover {
+  background-color: #292524;
+}
+
+p.madewithlove {
+  font-weight: 700;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f3fdfb;
+}
